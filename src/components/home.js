@@ -1,9 +1,10 @@
 import React from 'react'
+import Navigator from './Navigator'
 
 const Home = () => {
   return (
-    <div>
-      
+    <div style={{width:"50px"}}>
+      <Navigator/>
     </div>
   )
 }

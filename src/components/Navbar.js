@@ -1,5 +1,5 @@
-
 import React from 'react';
+import "../styles/navbar.css"
 import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
@@ -15,19 +15,18 @@ const Navbar = () => {
   if (!isLoggedIn) return null;
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+             <li className="nav-item">
+              <Link className="nav-link" to="/home">Home</Link>
+            </li>
             <li className="nav-item">
               <Link className="nav-link" to="/users">Users</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/connections">Connections</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/data">Data</Link>
-            </li>
+          </ul>
+          <ul className="navbar-nav mb-2 mb-lg-0">
             <li className="nav-item">
               <button className="nav-link btn btn-link" onClick={handleLogout}>Logout</button>
             </li>
